@@ -21,21 +21,23 @@ def checking_new_coin():
         Send_notification_Android("Some new coins has been added please check")
     else:
         print("No change")
-def start_looking():
+
+
     
-    while True:
-        checking_new_coin()    
-        time.sleep(1) #1 second
 def get_coin_change(coin_name):
     print(get_coin(coin_name)['last'])
-    
+'''
+    while True:
+        #    
+        time.sleep(1) #1 second
+'''
 #----------------------------------------------------------------
 #To send the notification
 #Send_notification_Android(<msg>)
 
 #----------------------------------------------------------------
 #get_coin(<coin_name>)
-start_looking()
+
 #get_coin_list() to display coins
 #----------------------------------------------------------------
 
