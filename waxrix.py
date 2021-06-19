@@ -20,9 +20,7 @@ def checking_new_coin():
         Update_row_in_table_NEWCOINDETAIL(new_coin_T_F)
         Send_notification_Android("Some new coins has been added please check")
     else:
-        print("No change")
-
-
+        print("No change in Market")
     
 def get_coin_change(coin_name):
     print(get_coin(coin_name)['last'])
