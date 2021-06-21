@@ -16,12 +16,13 @@ def checking_new_coin():
     new_coin_T_F=len(get_coin_list())
     past_value=get_past_value()
     print(f"newdata={new_coin_T_F} and past data={past_value}")
-    if new_coin_T_F>past_value:
+    if past_value=="1":
+        Update_row_in_table_NEWCOINDETAIL(new_coin_T_F)
+    elif new_coin_T_F>past_value:
         Update_row_in_table_NEWCOINDETAIL(new_coin_T_F)
         Send_notification_Android("Some new coins has been added please check")
     else:
         print("No change in Market")
-    
 def get_coin_change(coin_name):
     print(get_coin(coin_name)['last'])
 '''
