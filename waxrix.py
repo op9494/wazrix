@@ -16,9 +16,11 @@ def checking_new_coin():
     new_coin_T_F=len(get_coin_list())
     past_value=get_past_value()
     print(f"newdata={new_coin_T_F} and past data={past_value}")
-    if past_value=="1":
+    if past_value==1:
+        print("setting new coin value")
         Update_row_in_table_NEWCOINDETAIL(new_coin_T_F)
     elif new_coin_T_F>past_value:
+        print("updateing new coin value")
         Update_row_in_table_NEWCOINDETAIL(new_coin_T_F)
         Send_notification_Android("Some new coins has been added please check")
     else:

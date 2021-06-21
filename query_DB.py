@@ -52,3 +52,4 @@ def get_past_value():
        return row[0]
     conn.close()
     print("DB Connection Closed")
+    
